@@ -3,7 +3,11 @@ import sys
 import time
 
 def check_search_functionality():
-    conn = http.client.HTTPConnection("localhost", 3002, timeout=10)
+    # Wait for server to be fully ready
+    print("Waiting for server to be fully initialized...")
+    time.sleep(15)  # Increased wait time for compilation
+
+    conn = http.client.HTTPConnection("localhost", 3002, timeout=30)  # Increased timeout
 
     try:
         # Check main page for search box
