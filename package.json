@@ -5,7 +5,6 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "postbuild": "pagefind --site .next/server/pages --output-path public/_pagefind",
     "start": "next start",
     "format": "prettier --write ."
   },
@@ -18,7 +17,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "pagefind": "^1.1.1",
     "prettier": "^3.4.2"
   }
 }
