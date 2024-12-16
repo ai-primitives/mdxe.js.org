@@ -3,7 +3,7 @@ import sys
 import time
 
 def check_search_functionality():
-    conn = http.client.HTTPConnection("localhost", 3001, timeout=10)
+    conn = http.client.HTTPConnection("localhost", 3002, timeout=10)
 
     try:
         # Check main page for search box
