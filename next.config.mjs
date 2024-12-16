@@ -1,14 +1,12 @@
 import nextra from 'nextra'
+import withNextra from 'nextra-theme-docs'
 
-const withNextra = nextra({
+export default withNextra({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.jsx',
+  defaultShowCopyCode: true,
   latex: true,
   search: {
     codeblocks: true
-  },
-  contentDirBasePath: '/',
-  defaultShowCopyCode: true
-})
-
-export default withNextra({
-  reactStrictMode: true,
+  }
 })
