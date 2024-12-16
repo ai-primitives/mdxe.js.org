@@ -1,11 +1,14 @@
+import React from 'react'
 import { useConfig } from 'nextra-theme-docs'
 
+const Logo = () => (
+  <div>
+    <b>MDXE</b> <span style={{ opacity: '60%' }}>Zero-config MDX processor</span>
+  </div>
+)
+
 export default {
-  logo: (
-    <div>
-      <b>MDXE</b> <span style={{ opacity: '60%' }}>Zero-config MDX processor</span>
-    </div>
-  ),
+  logo: <Logo />,
   project: {
     link: 'https://github.com/ai-primitives/mdxe'
   },
