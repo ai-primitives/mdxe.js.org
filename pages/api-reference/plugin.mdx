@@ -1,0 +1,47 @@
+---
+$type: TechArticle
+title: Next.js Plugin API
+description: API reference for MDXE's Next.js plugin, including configuration options and integration details
+---
+
+# Next.js Plugin API
+
+## withMDXE Function
+
+```typescript
+interface MDXEPluginOptions {
+  mdxOptions?: Record<string, unknown>
+  watch?: {
+    enabled?: boolean
+    ignore?: string[]
+  }
+}
+
+function withMDXE(
+  nextConfig: NextConfig = {},
+  pluginOptions: MDXEPluginOptions = {}
+): NextConfig
+```
+
+## Configuration Examples
+
+```javascript
+// Basic usage
+export default withMDXE()
+
+// With options
+export default withMDXE({
+  // Next.js config
+  reactStrictMode: true
+}, {
+  // MDXE options
+  mdxOptions: {
+    jsx: true
+  },
+  watch: {
+    enabled: true
+  }
+})
+```
+
+See [Next.js Integration](/features/next-integration) for usage examples.

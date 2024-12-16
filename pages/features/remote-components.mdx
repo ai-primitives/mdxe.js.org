@@ -1,0 +1,40 @@
+---
+$type: TechArticle
+title: Remote Components
+description: Guide to using remote components in MDXE, including security considerations and best practices
+---
+
+# Remote Components
+
+MDXE supports importing components from remote URLs.
+
+## Usage
+
+```mdx
+import Button from 'https://ui.example.com/button'
+import Card from 'https://components.example.com/card'
+
+<Button>Click me</Button>
+<Card title="Example">Content</Card>
+```
+
+## Security Considerations
+
+1. Only import from trusted sources
+2. Use HTTPS URLs
+3. Consider implementing CSP headers
+4. Cache remote components
+
+## Best Practices
+
+```javascript
+// Configure trusted sources
+const config = {
+  allowedDomains: [
+    'ui.example.com',
+    'components.example.com'
+  ]
+}
+```
+
+See [Security Guide](/guides/security) for more details.

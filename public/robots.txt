@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mdxe.js.org/sitemap.xml

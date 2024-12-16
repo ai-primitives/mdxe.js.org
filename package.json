@@ -4,21 +4,19 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next --turbopack",
-    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
+    "dev": "next dev",
     "start": "next start",
     "format": "prettier --write ."
   },
   "dependencies": {
     "@theguild/remark-mermaid": "^0.2.0",
-    "next": "^15.0.2",
-    "nextra": "^4.0.0-app-router.34",
-    "nextra-theme-docs": "^4.0.0-app-router.34",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "next": "13.4.19",
+    "nextra": "2.9.0",
+    "nextra-theme-docs": "2.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "pagefind": "^1.1.1",
     "prettier": "^3.4.2"
   }
 }

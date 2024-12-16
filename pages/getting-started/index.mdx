@@ -1,0 +1,62 @@
+---
+$type: TechArticle
+title: Getting Started with MDXE
+description: Quick start guide for installing and using MDXE, a zero-config MDX processor with Next.js integration
+---
+
+# Getting Started with MDXE
+
+MDXE is a zero-config MDX processor that seamlessly integrates with Next.js. This guide will help you get started quickly.
+
+## Installation
+
+Install MDXE using your preferred package manager:
+
+```bash
+# Using npm
+npm install mdxe
+
+# Using yarn
+yarn add mdxe
+
+# Using pnpm
+pnpm add mdxe
+```
+
+## Quick Start
+
+1. Add MDXE to your Next.js project:
+
+```js
+// next.config.mjs
+import { withMDXE } from 'mdxe'
+
+export default withMDXE({
+  // your existing Next.js config
+})
+```
+
+2. Create an MDX file:
+
+```mdx
+---
+title: My First MDX Page
+---
+
+# Hello, MDXE!
+
+This is my first MDX page using MDXE.
+```
+
+3. Start your development server:
+
+```bash
+npm run dev
+```
+
+## What's Next?
+
+- [Configuration Options](/getting-started/configuration)
+- [MDX Processing Features](/features/mdx-processing)
+- [Next.js Integration](/features/next-integration)
+- [CLI Usage](/features/cli-usage)
