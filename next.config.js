@@ -1,10 +1,12 @@
 const withNextra = require('nextra')({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.jsx',
-  search: {
-    codeblocks: true,
-    placeholder: 'Search documentation...'
+  defaultShowCopyCode: true,
+  flexsearch: {
+    codeblocks: true
   }
 })
 
-module.exports = withNextra()
+module.exports = withNextra({
+  swcMinify: true
+})
