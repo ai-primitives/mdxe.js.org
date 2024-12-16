@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
+    "postbuild": "pagefind --site .next/server/pages --output-path public/_pagefind",
     "start": "next start",
     "format": "prettier --write ."
   },

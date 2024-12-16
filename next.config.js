@@ -1,13 +1,6 @@
-const nextra = require('nextra')
-
-const withNextra = nextra({
+const withNextra = require('nextra')({
   theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.jsx',
-  defaultShowCopyCode: true,
-  latex: true,
-  search: {
-    codeblocks: true
-  }
+  themeConfig: './theme.config.jsx'
 })
 
-module.exports = withNextra
+module.exports = withNextra()
