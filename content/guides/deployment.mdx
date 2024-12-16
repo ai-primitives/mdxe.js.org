@@ -1,0 +1,45 @@
+---
+$type: TechArticle
+title: Deployment Guide
+description: Guide to deploying MDXE-powered sites to production environments
+---
+
+# Deployment Guide
+
+## Build Process
+
+```bash
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## Environment Setup
+
+1. Configure environment variables
+2. Set up CDN (optional)
+3. Configure build cache
+
+## Deployment Platforms
+
+### Vercel
+
+```bash
+vercel deploy
+```
+
+### Netlify
+
+```toml
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = ".next"
+```
+
+See [Next.js Integration](/features/next-integration) for platform-specific details.

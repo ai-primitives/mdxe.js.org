@@ -1,0 +1,50 @@
+---
+$type: TechArticle
+title: CLI Tool Documentation
+description: Complete guide to using the MDXE command-line interface for MDX processing
+---
+
+# CLI Usage
+
+MDXE provides a powerful CLI for processing MDX files.
+
+## Installation
+
+```bash
+npm install -g mdxe
+```
+
+## Basic Commands
+
+```bash
+# Process single file
+mdxe file.mdx
+
+# Watch mode
+mdxe file.mdx --watch
+
+# Process directory
+mdxe content/
+```
+
+## Configuration
+
+Create `mdxe.config.js`:
+
+```javascript
+module.exports = {
+  watch: {
+    enabled: true,
+    ignore: ['**/node_modules/**']
+  }
+}
+```
+
+## Common Options
+
+- `--version`: Show version
+- `--help`: Show help
+- `--watch`: Enable watch mode
+- `--config`: Specify config file
+
+See [CLI API Reference](/api-reference/cli) for all options.

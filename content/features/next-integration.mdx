@@ -1,0 +1,59 @@
+---
+$type: TechArticle
+title: Next.js Integration
+description: Learn how to integrate MDXE with Next.js projects using the zero-config plugin
+---
+
+# Next.js Integration
+
+MDXE provides seamless integration with Next.js through its plugin system.
+
+## Basic Setup
+
+```javascript
+// next.config.mjs
+import { withMDXE } from 'mdxe'
+
+export default withMDXE({
+  // Your Next.js config here
+})
+```
+
+## Advanced Features
+
+### Custom MDX Components
+
+```javascript
+// mdx-components.js
+export function useMDXComponents(components) {
+  return {
+    h1: props => <h1 style={{ color: 'blue' }} {...props} />,
+    ...components
+  }
+}
+```
+
+### Page Metadata
+
+```mdx
+---
+title: My Page
+description: SEO-friendly description
+---
+
+# Content
+```
+
+## Troubleshooting
+
+Common issues and solutions:
+
+1. **MDX files not processing**
+   - Ensure file extension is .mdx
+   - Check pageExtensions in Next.js config
+
+2. **Component import errors**
+   - Verify import path
+   - Check component compatibility
+
+See [Deployment Guide](/guides/deployment) for production setup.

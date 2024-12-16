@@ -1,0 +1,66 @@
+---
+$type: TechArticle
+title: MDXE Configuration Guide
+description: Learn how to configure MDXE for your project, including MDX options, watch mode, and Next.js integration settings
+---
+
+# Configuration Guide
+
+MDXE provides several configuration options to customize its behavior.
+
+## Plugin Options
+
+```typescript
+interface MDXEPluginOptions {
+  mdxOptions?: Record<string, unknown>
+  watch?: {
+    enabled?: boolean
+    ignore?: string[]
+  }
+}
+```
+
+## Next.js Configuration
+
+```javascript
+// next.config.mjs
+import { withMDXE } from 'mdxe'
+
+export default withMDXE({
+  // Next.js config
+}, {
+  // MDXE options
+  mdxOptions: {
+    jsx: true,
+    // Additional MDX compile options
+  },
+  watch: {
+    enabled: true,
+    ignore: ['node_modules/**']
+  }
+})
+```
+
+## CLI Configuration
+
+Create an `mdxe.config.js` file in your project root:
+
+```javascript
+module.exports = {
+  mdxOptions: {
+    // MDX compile options
+  },
+  watch: {
+    enabled: true,
+    ignore: ['**/node_modules/**']
+  }
+}
+```
+
+## Environment Variables
+
+No environment variables are required for basic usage.
+
+## Advanced Configuration
+
+See the [API Reference](/api-reference/plugin) for detailed configuration options.

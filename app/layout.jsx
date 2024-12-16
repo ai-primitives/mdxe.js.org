@@ -1,55 +1,46 @@
 /* eslint-env node */
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
-import { Banner, Head } from 'nextra/components'
+import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 
 export const { viewport } = Head
 
 export const metadata = {
-  metadataBase: new URL('https://nextra.site'),
+  metadataBase: new URL('https://mdxe.js.org'),
   title: {
-    template: '%s - Nextra',
+    template: '%s - MDXE',
+    default: 'MDXE - Zero-config MDX processor and Next.js integration'
   },
-  description: 'Nextra: the Next.js site builder',
-  applicationName: 'Nextra',
+  description: 'MDXE: Zero-config MDX processor with Next.js integration, remote components, and CLI tools',
+  applicationName: 'MDXE',
   generator: 'Next.js',
-  appleWebApp: {
-    title: 'Nextra',
-  },
-  other: {
-    'msapplication-TileImage': '/ms-icon-144x144.png',
-    'msapplication-TileColor': '#fff',
+  keywords: ['mdx', 'next.js', 'markdown', 'documentation', 'static site'],
+  authors: [{ name: 'AI Primitives' }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://mdxe.js.org',
+    siteName: 'MDXE Documentation',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }]
   },
   twitter: {
-    site: 'https://nextra.site',
-  },
+    card: 'summary_large_image',
+    site: '@ai_primitives'
+  }
 }
 
 export default async function RootLayout({ children }) {
-  const navbar = (
-    <Navbar
-      logo={
-        <div>
-          <b>Nextra</b> <span style={{ opacity: '60%' }}>The Next Docs Builder</span>
-        </div>
-      }
-      // Next.js discord server
-      chatLink='https://discord.gg/hEM84NMkRv'
-    />
-  )
+  const pageMap = await getPageMap()
   return (
     <html lang='en' dir='ltr' suppressHydrationWarning>
       <Head faviconGlyph='✦' />
       <body>
         <Layout
-          banner={<Banner storageKey='Nextra 2'>Nextra 2 Alpha</Banner>}
-          navbar={navbar}
+          navbar={<Navbar />}
           footer={<Footer />}
-          editLink='Edit this page on GitHub'
-          docsRepositoryBase='https://github.com/shuding/nextra/blob/main/examples/docs'
-          sidebar={{ defaultMenuCollapseLevel: 1 }}
-          pageMap={await getPageMap()}
+          docsRepositoryBase='https://github.com/ai-primitives/mdxe.js.org'
+          pageMap={pageMap}
         >
           {children}
         </Layout>

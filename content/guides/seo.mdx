@@ -1,0 +1,39 @@
+---
+$type: TechArticle
+title: SEO Optimization Guide
+description: Learn how to optimize your MDXE-powered site for search engines
+---
+
+# SEO Optimization Guide
+
+## Metadata Configuration
+
+```javascript
+// app/layout.js
+export const metadata = {
+  title: {
+    template: '%s - Your Site'
+  },
+  description: 'Site description'
+}
+```
+
+## MDX Frontmatter
+
+```mdx
+---
+title: Page Title
+description: Page description
+keywords: [key1, key2]
+---
+```
+
+## Best Practices
+
+1. Use semantic HTML
+2. Optimize images
+3. Create a sitemap
+4. Configure robots.txt
+5. Use canonical URLs
+
+See [Next.js Integration](/features/next-integration) for implementation details.

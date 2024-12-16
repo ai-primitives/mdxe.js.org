@@ -1,0 +1,58 @@
+---
+$type: TechArticle
+title: MDX Processor API
+description: Complete API reference for the MDXE processor, including options, types, and examples
+---
+
+# MDX Processor API
+
+## processMDX Function
+
+```typescript
+interface MDXProcessorOptions {
+  filepath: string
+  content?: string
+  components?: Record<string, string>
+  layout?: string
+  compileOptions?: Partial<CompileOptions>
+  watch?: {
+    enabled?: boolean
+    ignore?: string[]
+  }
+}
+
+interface ProcessedMDX {
+  code: string
+  frontmatter: Record<string, unknown>
+  metadata: Record<string, unknown>
+}
+
+async function processMDX(options: MDXProcessorOptions): Promise<ProcessedMDX>
+```
+
+## Usage Examples
+
+```javascript
+// Basic usage
+const result = await processMDX({
+  filepath: 'content/page.mdx'
+})
+
+// With watch mode
+const result = await processMDX({
+  filepath: 'content/page.mdx',
+  watch: {
+    enabled: true
+  }
+})
+
+// With custom components
+const result = await processMDX({
+  filepath: 'content/page.mdx',
+  components: {
+    Button: 'https://ui.example.com/button'
+  }
+})
+```
+
+See [MDX Processing Features](/features/mdx-processing) for more examples.

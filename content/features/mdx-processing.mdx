@@ -1,0 +1,62 @@
+---
+$type: TechArticle
+title: MDX Processing Features
+description: Explore MDXE's MDX processing capabilities including frontmatter support, remote components, and watch mode
+---
+
+# MDX Processing Features
+
+MDXE provides powerful MDX processing capabilities with zero configuration required.
+
+## Frontmatter Support
+
+MDXE automatically extracts frontmatter metadata:
+
+```mdx
+---
+title: My Page
+description: Page description
+---
+
+# Content here
+```
+
+## Remote Components
+
+Import components from URLs:
+
+```mdx
+import Button from 'https://ui.example.com/button'
+
+<Button>Click me</Button>
+```
+
+## Watch Mode
+
+MDXE can watch your MDX files for changes:
+
+```javascript
+const result = await processMDX({
+  filepath: 'content/page.mdx',
+  watch: {
+    enabled: true,
+    ignore: ['**/node_modules/**']
+  }
+})
+```
+
+## Error Handling
+
+MDXE provides detailed error messages:
+
+```javascript
+try {
+  await processMDX({ filepath: 'page.mdx' })
+} catch (error) {
+  console.error('MDX processing failed:', error.message)
+}
+```
+
+## Code Examples
+
+See the [API Reference](/api-reference/processor) for more examples.
