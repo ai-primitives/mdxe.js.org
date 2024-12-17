@@ -1,23 +1,59 @@
 # MDXE Documentation
 
-Welcome to MDXE, a zero-config MDX processor with Next.js integration.
+<table>
+  <tr>
+    <td>
+      <a href="https://www.npmjs.com/package/mdxe">
+        <img src="https://badge.fury.io/js/mdxe.svg" alt="npm version" />
+      </a>
+    </td>
+    <td>
+      <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+Welcome to MDXE, a powerful CLI tool and library for zero-config MDX processing.
+
+```bash
+# Install globally (recommended)
+npm install -g mdxe
+
+# Or use with npx
+npx mdxe build docs/*.mdx --out dist/
+
+# Process MDX files in watch mode
+mdxe watch content/ --out public/
+```
 
 ## Features
 
-- Zero configuration MDX processing
-- Seamless Next.js integration
-- Remote component support
-- Command-line interface
-- Built-in SEO optimization
+- 🚀 Command-line interface for quick MDX processing
+- ⚡️ Zero-config file watching and hot reload
+- 📦 Global installation or npx usage
+- 🎨 Default Tailwind Typography styling
+- 🔄 Automatic metadata generation
+- 📝 Next.js integration (optional)
+- 🌐 Remote component imports (esm.sh)
 
-## Getting Started
+## Next.js Integration
 
-Visit our [configuration guide](/getting-started/configuration) to begin using MDXE in your project.
+MDXE also works as a Next.js plugin:
+
+```js
+// next.config.js
+import { withMDXE } from 'mdxe/next'
+export default withMDXE({
+  // your next.js config
+})
+```
 
 ## Quick Links
 
+- [CLI Usage](/features/cli-usage)
 - [MDX Processing](/features/mdx-processing)
 - [Next.js Integration](/features/next-integration)
 - [Remote Components](/features/remote-components)
-- [CLI Usage](/features/cli-usage)
 - [API Reference](/api-reference/processor)
