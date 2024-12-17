@@ -10,6 +10,10 @@ export default {
   project: {
     link: 'https://github.com/ai-primitives/mdxe'
   },
+  navigation: {
+    'api-reference': 'API Reference',
+    'getting-started': 'Getting Started'
+  },
   docsRepositoryBase: 'https://github.com/ai-primitives/mdxe.js.org/tree/main',
   useNextSeoProps() {
     return {
