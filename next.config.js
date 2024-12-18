@@ -11,5 +11,9 @@ const withNextra = require('nextra')({
 })
 
 module.exports = withNextra({
-  swcMinify: true
+  swcMinify: true,
+  images: {
+    domains: ['badge.fury.io', 'img.shields.io'],
+    unoptimized: true
+  }
 })
