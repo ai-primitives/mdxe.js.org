@@ -14,8 +14,8 @@ export default {
     }
   },
   navigation: {
-    'api-reference': 'API Reference',
-    'getting-started': 'Getting Started'
+    next: true,
+    prev: true
   },
   docsRepositoryBase: 'https://github.com/ai-primitives/mdxe.js.org/tree/main',
   useNextSeoProps() {

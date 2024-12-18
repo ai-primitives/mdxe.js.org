@@ -1,0 +1,14 @@
+/* Badge layout styles */
+.flex.space-x-2 {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+
+.flex.space-x-2 > * + * {
+  margin-left: 0.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
