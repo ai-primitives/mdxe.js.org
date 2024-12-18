@@ -8,7 +8,10 @@ function Logo() {
 export default {
   logo: <Logo />,
   project: {
-    link: 'https://github.com/ai-primitives/mdxe'
+    link: 'https://github.com/ai-primitives/mdxe',
+    chat: {
+      link: 'https://discord.gg/BHZCzx83'
+    }
   },
   navigation: {
     'api-reference': 'API Reference',
