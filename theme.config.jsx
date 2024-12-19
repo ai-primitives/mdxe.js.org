@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 function Logo() {
-  return <span>MDXE</span>
+  return <span>MDXe</span>
 }
 
 export default {
@@ -21,10 +21,10 @@ export default {
   useNextSeoProps() {
     return {
       metadataBase: new URL('https://mdxe.js.org'),
-      titleTemplate: '%s – MDXE',
-      defaultTitle: 'MDXE - Zero-config MDX processor and Next.js integration',
-      description: 'MDXE: Zero-config MDX processor with Next.js integration, remote components, and CLI tools',
-      applicationName: 'MDXE',
+      titleTemplate: '%s – MDXe',
+      defaultTitle: 'MDXe - Zero-config MDX processor and Next.js integration',
+      description: 'MDXe: Zero-config MDX processor with Next.js integration, remote components, and CLI tools',
+      applicationName: 'MDXe',
       generator: 'Next.js',
       keywords: ['mdx', 'next.js', 'markdown', 'documentation', 'static site'],
       authors: [{ name: 'AI Primitives' }],
@@ -32,13 +32,13 @@ export default {
         type: 'website',
         locale: 'en_US',
         url: 'https://mdxe.js.org',
-        siteName: 'MDXE Documentation',
+        siteName: 'MDXe Documentation',
         images: [
           {
             url: 'https://mdxe.js.org/og-image.png',
             width: 1200,
             height: 630,
-            alt: 'MDXE Documentation'
+            alt: 'MDXe Documentation'
           }
         ]
       },
@@ -64,6 +64,6 @@ export default {
     </>
   ),
   footer: {
-    text: 'MIT © 2024 MDXE'
+    text: 'MIT © 2024 MDXe'
   }
 }
